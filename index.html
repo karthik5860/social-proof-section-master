@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png"sizes="32x32"href="./images/favicon-32x32.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <style>
+      html{
+        margin: 0;
+        font-family: 'League Spartan', sans-serif;
+      }
+      body{
+        background: url(images/bg-pattern-top-desktop.svg) no-repeat fixed left top, url(images/bg-pattern-bottom-desktop.svg) no-repeat fixed right bottom, hsl(0, 0%, 100%);
+        min-height: 100vh;
+        margin: 0;
+        color: hsl(300, 43%, 22%);
+      }
+
+      .main{
+        min-height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 200px;
+        grid-gap: 50px;
+      }
+
+      
+      h1{
+        padding-right: 15%;
+        font-size: 50px;
+        font-weight: 700;
+      }
+      p{
+        color: hsl(303, 10%, 53%);
+        font-weight: 500;
+      }
+      .introgrid{
+        margin-top: 50px;
+        padding-right: 100px;
+        grid-column: 1/1;
+      }
+      .ratinggrid{
+        grid-column: 2/2;
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .ratingbar{
+        display: flex;
+        width: 400px;
+        height: 20px;
+        background:  hsl(300, 24%, 96%);
+        padding: 20px 15px ;
+        font-weight: 700;
+        font-size: 18px;
+        border-radius: 10px;
+      }
+      .star{
+        background: url(images/icon-star.svg);
+        width: 100px;
+        height: 20px;
+        margin: 0 10px;
+        margin-right:25px;
+        background-repeat: space;
+      }
+      .one{
+        margin-left: -80px;
+      }
+      .three{
+        margin-left: 80px;
+      }
+      .reviewgrid{
+        grid-column: 1/span 2;
+        display: flex;
+        gap: 20px;
+      }
+      .reviewbox{
+        width: 350px;
+        height: 120px;
+        background: hsl(300, 43%, 22%);
+        padding: 50px 20px;
+        border-radius: 10px;
+      }
+      .reviewbox img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .reviewbox .verified{
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: hsl(333deg 51% 50%);
+      }
+      .reviewbox .name{
+        font-size: 22px;
+        color: hsl(300, 24%, 96%);
+      }
+      .reviewbox .content{
+        color: hsl(300, 24%, 96%);
+      }
+      .no1{
+        margin-top: -200px;
+      }
+      .no2{
+        margin-top: -180px;
+      }
+      .no3{
+        margin-top: -160px;
+      }
+      @media screen and (max-width: 1000px){
+        body{
+          background: url(images/bg-pattern-top-mobile.svg) no-repeat fixed left top, url(images/bg-pattern-bottom-mobile.svg) no-repeat fixed right bottom, hsl(0, 0%, 100%);
+        }
+        .main{
+          display: flex;
+          flex-direction: column;
+        }
+        .introgrid,.ratinggrid,.reviewgrid{
+          flex-direction: column;
+          margin: 0;
+        }
+        h1,.introgrid{
+          padding: 0;
+        }
+        .introgrid{
+          width: 350px;
+          text-align: center;
+        }
+        .one,.two,.three,.no1,.no2,.no3{
+          margin: 0;
+        }
+        .ratingbar{
+          flex-direction: column;
+          height: 40px;
+          text-align: center;
+        }
+        .star{
+          margin-left: 35%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+       <div class="introgrid">
+          
+        <h1>10,000+ of our users love our products.</h1>
+
+        <p>We only provide great products combined with excellent customer service.
+        See what our satisfied customers are saying about our services.</p>
+
+      </div>
+      
+      <div class="ratinggrid">
+        <div class="ratingbar one">
+          <div class="star"></div>
+          <div class="content">Rated 5 Stars in Reviews</div>  
+        </div>
+        <div class="ratingbar two">
+          <div class="star"></div>
+          <div class="content">Rated 5 Stars in Report Guru</div>  
+        </div>
+        <div class="ratingbar three">
+          <div class="star"></div>
+          <div class="content">Rated 5 Stars in BestTech</div>  
+        </div>        
+      </div>
+      
+      <div class="reviewgrid">
+        <div class="reviewbox no1">
+          <img src="images/image-colton.jpg" alt="colton">
+          <div class="name">Colton Smith</div>
+          <div class="verified">Verified Buyer</div>
+          <div class="content">
+            "We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"
+          </div>
+        </div>
+        <div class="reviewbox no2">
+          <img src="images/image-irene.jpg" alt="irene">
+          <div class="name">Irene Roberts</div>
+          <div class="verified">Verified Buyer</div>
+          <div class="content">
+            "Customer service is always excellent and very quick turn around. Completely
+            delighted with the simplicity of the purchase and the speed of delivery."
+          </div>
+        </div>
+        <div class="reviewbox no3">
+          <img src="images/image-anne.jpg" alt="anne">
+          <div class="name">Anne Wallace</div>
+          <div class="verified">Verified Buyer</div>
+          <div class="content">
+            "Put an order with this company and can only praise them for the very high
+            standard. Will definitely use them again and recommend them to everyone!"
+          </div>
+        </div>
+
+        </div>
+   
+    </div>
+    
+
+  </body>
+</html>
